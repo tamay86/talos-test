@@ -1,0 +1,19 @@
+cluster:
+  allowSchedulingOnControlPlanes: true
+  network:
+    podSubnets:
+      - fda0:0:0:0:0:0::/96
+      - 10.244.0.0/16
+    serviceSubnets:
+      - fda0:0:0:0:0:1::/112
+      - 10.96.0.0/16
+    cni:
+      name: none
+  apiServer:
+    extraArgs:
+      bind-address: "::"
+  controllerManager:
+    extraArgs:
+      node-cidr-mask-size-ipv6: "112"
+  proxy:
+    disabled: true

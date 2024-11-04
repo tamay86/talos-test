@@ -1,0 +1,7 @@
+machine:
+  network:
+    hostname: talos-worker-1
+    interfaces:
+      - deviceSelector:
+          physical: true
+        dhcp: true
