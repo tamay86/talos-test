@@ -96,3 +96,12 @@ Cilium L2 Advertisements für IPv6 funnktionieren nicht
 ```text
 The feature currently does not support IPv6/NDP.
 ```
+
+## Upgrade von Talos
+
+* Nicht alle Nodes auf einmal upgraden
+* Image muss mitangegeben werden
+
+```shell
+talosctl --nodes ${IP_CP} upgrade --image ghcr.io/siderolabs/installer:v1.8.3
+```
